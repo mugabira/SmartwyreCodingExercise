@@ -9,6 +9,7 @@ namespace Smartwyre.DeveloperTest.Interfaces
 {
     internal interface IIncentiveCalculator
     {
+        IncentiveType IncentiveType { get; }
         bool IsApplicable(Rebate rebate, Product product, CalculateRebateRequest request);
         decimal CalculateAmount(Rebate rebate, Product product, CalculateRebateRequest request);
     }

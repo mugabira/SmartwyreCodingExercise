@@ -11,6 +11,9 @@ namespace Smartwyre.DeveloperTest.Services
     // The strategy pattern for FixedCashAmount
     public class FixedCashAmountCalculator : IIncentiveCalculator
     {
+        public IncentiveType IncentiveType => IncentiveType.FixedCashAmount;
+        
+
         public bool IsApplicable(Rebate rebate, Product product, CalculateRebateRequest request)
         {
             return rebate != null &&

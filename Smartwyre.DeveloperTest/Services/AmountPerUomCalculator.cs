@@ -10,6 +10,7 @@ namespace Smartwyre.DeveloperTest.Services
 {
     public class AmountPerUomCalculator : IIncentiveCalculator
     {
+        public IncentiveType IncentiveType => IncentiveType.AmountPerUom;
         public bool IsApplicable(Rebate rebate, Product product, CalculateRebateRequest request)
         {
             return rebate != null &&

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Smartwyre.DeveloperTest.Interfaces;
 using Smartwyre.DeveloperTest.Types;
 
@@ -10,7 +11,8 @@ public class RebateService : IRebateService
     private readonly IRebateDataStore _rebateDataStore;
     private readonly IProductDataStore _productDataStore;
     // Dictionary to map incentive types to their calculators for extensibility
-    private readonly Dictionary<IncentiveType, IIncentiveCalculator> _calculators;
+    private readonly List<IIncentiveCalculator> _calculators;
+
 
     // Constructor with dependency injection to improve testability and adhere to SOLID principles
     public RebateService(IRebateDataStore rebateDataStore, IProductDataStore productDataStore)
@@ -20,13 +22,14 @@ public class RebateService : IRebateService
         _productDataStore = productDataStore ?? throw new ArgumentNullException(nameof(productDataStore));
 
         // Initialize calculators dictionary to support strategy pattern for different incentive types
-        _calculators = new Dictionary<IncentiveType, IIncentiveCalculator>
-        {
-            { IncentiveType.FixedCashAmount, new FixedCashAmountCalculator() },
-            { IncentiveType.FixedRateRebate, new FixedRateRebateCalculator() },
-            { IncentiveType.AmountPerUom, new AmountPerUomCalculator() }
+        _calculators =  new List<IIncentiveCalculator>{
+            new FixedCashAmountCalculator(),
+             new FixedRateRebateCalculator(),
+             new AmountPerUomCalculator(),
         };
     }
+
+
     public CalculateRebateResult Calculate(CalculateRebateRequest request)
     {
         // null check to prevent null reference exceptions
@@ -46,10 +49,14 @@ public class RebateService : IRebateService
         var product = _productDataStore.GetProduct(request.ProductIdentifier);
 
         // Check if the incentive type has a registered calculator to handle unknown types
+
+        
         if (!_calculators.TryGetValue(rebate.Incentive, out var calculator))
         {
             return new CalculateRebateResult { Success = false };
         }
+
+        calculator = _calculators.FirstOrDefault(c => c.IncentiveType == rebate.Incentive);
 
         var result = new CalculateRebateResult();
 
