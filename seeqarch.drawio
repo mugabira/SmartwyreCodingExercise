@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:147.0) Gecko/20100101 Firefox/147.0" version="29.3.4">
   <diagram name="Page-1" id="GfaOQegVtd1CuosC9qV-">
-    <mxGraphModel dx="1042" dy="538" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1042" dy="1638" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -59,6 +59,24 @@
         </mxCell>
         <mxCell id="5OJqL5Ogus890ZUSC_2b-15" parent="1" style="swimlane;whiteSpace=wrap;html=1;swimlaneLine=1;" value="Factory Network" vertex="1">
           <mxGeometry height="400" width="240" x="550" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="5OJqL5Ogus890ZUSC_2b-26" edge="1" parent="1" source="5OJqL5Ogus890ZUSC_2b-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="5OJqL5Ogus890ZUSC_2b-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5OJqL5Ogus890ZUSC_2b-17" parent="1" style="shape=image;html=1;verticalAlign=bottom;verticalLabelPosition=top;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://icons.diagrams.net/icon-cache1/Hydro_Pro-2053/Laptop-771.png;labelPosition=center;align=center;" value="Data scientists" vertex="1">
+          <mxGeometry height="68" width="68" x="280" y="-20" as="geometry" />
+        </mxCell>
+        <mxCell id="5OJqL5Ogus890ZUSC_2b-21" parent="1" style="shape=image;html=1;verticalAlign=bottom;verticalLabelPosition=top;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://icons.diagrams.net/icon-cache1/Hydro_Pro-2053/Laptop-771.png;labelPosition=center;align=center;" value="Executives" vertex="1">
+          <mxGeometry height="68" width="68" x="32" y="-20" as="geometry" />
+        </mxCell>
+        <mxCell id="5OJqL5Ogus890ZUSC_2b-25" edge="1" parent="1" source="5OJqL5Ogus890ZUSC_2b-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="5OJqL5Ogus890ZUSC_2b-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5OJqL5Ogus890ZUSC_2b-23" parent="1" style="shape=image;html=1;verticalAlign=bottom;verticalLabelPosition=top;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://icons.diagrams.net/icon-cache1/Hydro_Pro-2053/Laptop-771.png;labelPosition=center;align=center;" value="Operations managers" vertex="1">
+          <mxGeometry height="68" width="68" x="156" y="-40" as="geometry" />
+        </mxCell>
+        <mxCell id="5OJqL5Ogus890ZUSC_2b-24" edge="1" parent="1" source="5OJqL5Ogus890ZUSC_2b-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="5OJqL5Ogus890ZUSC_2b-14">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
